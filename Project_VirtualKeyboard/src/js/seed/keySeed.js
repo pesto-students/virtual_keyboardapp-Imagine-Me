@@ -89,8 +89,7 @@ const keys = [
         "0": {
             value: "Tab",
             width: "auto",
-            alternate: "->",
-            alternateShow: false,
+            alternate: "&#10153;",
             charCode: '\t',
             isMobile: false
         },
@@ -186,7 +185,7 @@ const keys = [
         "0": {
             value: "Caps",
             width: "auto",
-            alternate: "->",
+            alternate: "&#8657;",
             alternateShow: false,
             charCode: 'caps',
             isMobile: false
@@ -269,7 +268,7 @@ const keys = [
         "0": {
             value: "Caps",
             width: "auto",
-            alternate: "->",
+            alternate: "&#8657;",
             alternateShow: false,
             charCode: 'caps',
             isMobile: true

@@ -17,16 +17,17 @@ textarea:focus{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(252, 252, 252);
+    font-size: 18px;
+    background-color: transparent;
     border: none;
     margin: 0;
 }
 .keys>button:not(:last-child)::after{
     content: ' ';
-    background-color: grey;
+    background-color: rgba(128, 128, 128, 0.116);
     position: absolute;
-    top: 4px;
-    bottom: 4px;
+    top: 6px;
+    bottom: 6px;
     right: 0;
     width: 1px;
 }
@@ -36,6 +37,15 @@ textarea:focus{
     top: 3px;
     left: 6px;
     color: grey;
+}
+.keys>button>span.main{
+    color: grey;
+}
+.keys>button>span.main.active{
+    color: black;
+}
+.keys>button:focus{
+    outline: none;
 }
 
 .d-none {
@@ -48,11 +58,11 @@ textarea:focus{
 }
 
 button.key.active {
-    background-color: red;
+    background-color: rgb(108, 211, 214);
 }
 
 .alt.active {
-    color: red !important;
+    color: black !important;
 }
 
 #virtual-keyboard{
@@ -60,6 +70,8 @@ button.key.active {
     bottom: 0;
     left: 0;
     right: 0;
+    background-color: rgb(248, 247, 247);
+    padding: 10px 0;
 }
 
 

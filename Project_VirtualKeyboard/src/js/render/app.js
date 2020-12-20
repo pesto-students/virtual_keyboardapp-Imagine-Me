@@ -15,7 +15,7 @@ const app = {
                 let button = event.target
                 if (button.tagName !== "BUTTON")
                     button = button.parentNode
-                const value = button.getAttribute('data-value')
+                let value = button.getAttribute('data-value')
                 switch (value) {
                     case 'backspace': app.output.pop(); break;
                     case 'symbols': app.isSymbolKeyBoard = !app.isSymbolKeyBoard;
@@ -32,18 +32,21 @@ const app = {
                         app.renderKeyboard()
                         break;
 
-                    default: app.output.push(value)
+                    default:
+                        app.output.push(value)
                 }
-                console.log(app.keyState);
-                // app.output.push(value)
+
+                console.log(app.output)
                 textarea.value = app.output.join('')
                 textarea.scrollTop = textarea.scrollHeight;
             }
         })
     },
+
+
     renderKeyboard: () => {
         const isMobileScreen = window.innerWidth <= 720
-        if(!isMobileScreen)
+        if (!isMobileScreen)
             app.isSymbolKeyBoard = false
         let keyboard = ''
         const isCaps = app.keyState.includes('caps')
@@ -70,9 +73,12 @@ const app = {
                     if (isMobileScreen)
                         width = element[key].mobileWidth ?? 'auto'
                     gridWidth.push(width)
-                    keyBoardLine += `<button class="key ${button_show_class} ${(element[key].charCode === 'caps' && isCaps) || (element[key].charCode === 'shift' && isShift) ? 'active' : ''}" data-value="${key_value}">
+                    let data_value = `data-value="${key_value}"`
+                    if (key_value === "\"")
+                        data_value = `data-value='${key_value}'`
+                    keyBoardLine += `<button class="key ${button_show_class} ${(element[key].charCode === 'caps' && isCaps) || (element[key].charCode === 'shift' && isShift) ? 'active' : ''}" ${data_value}' >
                             <span class="secondary ${element[key].shift !== undefined && element[key].caps === undefined ? 'alt' : 'd-none'} ${isShift ? 'active' : ''} ${isMobileScreen ? 'd-none' : ''}">${element[key].shift ?? ''}</span>
-                            <span class="main">${main_key_text}</span>
+                            <span class="main ${isShift ? ((element[key].caps !== undefined) || (element[key].caps === undefined && element[key].shift == undefined ) ? 'active' : '') : 'active'}">${main_key_text}</span>
                         </button>`
                 }
             }
