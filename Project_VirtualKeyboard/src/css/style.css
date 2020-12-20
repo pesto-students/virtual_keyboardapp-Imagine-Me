@@ -11,8 +11,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(128, 128, 128, 0.116);
+    background-color: rgb(252, 252, 252);
+    border: none;
     margin: 0;
+}
+.keys>button:not(:last-child)::after{
+    content: ' ';
+    background-color: grey;
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    right: 0;
+    width: 1px;
 }
 
 .keys>button>span.alt {
