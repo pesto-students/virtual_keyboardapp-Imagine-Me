@@ -334,22 +334,33 @@ const keys = [
         "0": {
             value: "?/)",
             width: "6.5%",
+            mobileWidth: "40px",
             charCode: 'symbols',
             isMobile: true
         },
         "2": {
             value: ",",
+            mobileWidth: "40px",
             width: "6.5%",
             isMobile: true
         },
         "3": {
             value: "Space",
-            width: "30%",
+            width: "40%",
+            mobileWidth: "40%",
             charCode: ' '
         },
         "4": {
             value: ".",
             width: "6.5%",
+            mobileWidth: "40px",
+            isMobile: true
+        },
+        "5": {
+            value: "?/)",
+            width: "6.5%",
+            mobileWidth: "40px",
+            charCode: 'symbols',
             isMobile: true
         },
     }
@@ -357,144 +368,124 @@ const keys = [
 
 
 let symbolKeys = [
-    // {
-    //     "1": {
-    //         value: "1",
-    //         width: "6.5%",
-    //     },
-    //     "2": {
-    //         value: "2",
-    //         width: "6.5%",
-    //     },
-    //     "3": {
-    //         value: "3",
-    //         width: "6.5%",
-    //     },
-    //     "4": {
-    //         value: "4",
-    //         width: "6.5%",
-    //     },
-    //     "5": {
-    //         value: "5",
-    //         width: "6.5%",
-    //     },
-    //     "6": {
-    //         value: "6",
-    //         width: "6.5%",
-    //     },
-    //     "7": {
-    //         value: "7",
-    //         width: "6.5%",
-    //     },
-    //     "8": {
-    //         value: "8",
-    //         width: "6.5%",
-    //     },
-    //     "9": {
-    //         value: "9",
-    //         width: "6.5%",
-    //     },
-    //     "10": {
-    //         value: "0",
-    //         width: "6.5%",
-    //     },
-    // },
     {
         "1": {
             value: "@",
             width: "6.5%",
+            mobileWidth: "auto",
         },
         "2": {
             value: "#",
-            width: "6.5%",
+            mobileWidth: "40px",
         },
         "3": {
             value: "$",
             width: "6.5%",
+            mobileWidth: "40px"
         },
         "4": {
             value: "%",
             width: "6.5%",
+            mobileWidth: "40px"
         },
         "5": {
             value: "^",
             width: "6.5%",
+            mobileWidth: "40px"
         },
         "6": {
             value: "&",
             width: "6.5%",
+            mobileWidth: "40px"
         },
         "7": {
             value: "(",
             width: "6.5%",
+            mobileWidth: "40px"
         },
         "8": {
             value: ")",
             width: "6.5%",
+            mobileWidth: "auto"
         },
     },
     {
         "1": {
             value: "!",
             width: "6.5%",
+            mobileWidth: "auto"
         },
         "2": {
             value: "~",
             width: "6.5%",
+            mobileWidth: "40px"
         },
         "3": {
             value: "`",
             width: "6.5%",
+            mobileWidth: "40px"
         },
         "4": {
             value: "-",
             width: "6.5%",
+            mobileWidth: "40px"
         },
         "5": {
             value: "_",
             width: "6.5%",
+            mobileWidth: "40px"
         },
         "6": {
             value: "=",
             width: "6.5%",
+            mobileWidth: "40px"
         },
         "7": {
             value: "+",
             width: "6.5%",
+            mobileWidth: "40px"
         },
         "8": {
             value: "\\",
             width: "6.5%",
+            mobileWidth: "auto"
         },
     },
     {
         "1": {
             value: "{",
             width: "6.5%",
+            mobileWidth: "auto"
         },
         "2": {
             value: "}",
             width: "6.5%",
+            mobileWidth: "40px"
         },
         "3": {
             value: "[",
             width: "6.5%",
+            mobileWidth: "40px"
         },
         "4": {
             value: "]",
             width: "6.5%",
+            mobileWidth: "40px"
         },
         "5": {
             value: "|",
             width: "6.5%",
+            mobileWidth: "40px"
         },
         "7": {
             value: ":",
             width: "6.5%",
+            mobileWidth: "40px"
         },
         "8": {
             value: ";",
             width: "6.5%",
+            mobileWidth: "40px"
         },
         "9": {
             value: "Enter",
@@ -511,22 +502,27 @@ let symbolKeys = [
         "2": {
             value: "\"",
             width: "6.5%",
+            mobileWidth: "40px"
         },
         "3": {
             value: "<",
             width: "6.5%",
+            mobileWidth: "40px"
         },
         "4": {
             value: ">",
             width: "6.5%",
+            mobileWidth: "40px"
         },
         "5": {
             value: "?",
             width: "6.5%",
+            mobileWidth: "40px"
         },
         "6": {
             value: "?",
             width: "6.5%",
+            mobileWidth: "40px"
         },
         "7": {
             value: "Backspace",
@@ -540,13 +536,23 @@ let symbolKeys = [
         "0": {
             value: "aA",
             width: "6.5%",
+            mobileWidth: "40px",
             charCode: 'symbols',
             isMobile: true
         },
         "1": {
             value: "Space",
             width: "30%",
+
+            mobileWidth: "30%",
             charCode: ' '
+        },
+        "2": {
+            value: "aA",
+            width: "6.5%",
+            mobileWidth: "40px",
+            charCode: 'symbols',
+            isMobile: true
         },
     }
 ]
