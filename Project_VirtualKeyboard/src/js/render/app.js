@@ -17,7 +17,13 @@ const app = {
                     button = button.parentNode
                 let value = button.getAttribute('data-value')
                 switch (value) {
-                    case 'backspace': app.output.pop(); break;
+                    case 'backspace': app.output.pop();
+
+                        button.classList.add('active')
+                        setTimeout(() => {
+                            button.classList.remove('active')
+                        }, 100)
+                        break;
                     case 'symbols': app.isSymbolKeyBoard = !app.isSymbolKeyBoard;
                         app.renderKeyboard()
                         break;
@@ -33,10 +39,13 @@ const app = {
                         break;
 
                     default:
+                        button.classList.add('active')
+                        setTimeout(() => {
+                            button.classList.remove('active')
+                        }, 100)
                         app.output.push(value)
                 }
 
-                console.log(app.output)
                 textarea.value = app.output.join('')
                 textarea.scrollTop = textarea.scrollHeight;
             }
@@ -78,7 +87,7 @@ const app = {
                         data_value = `data-value='${key_value}'`
                     keyBoardLine += `<button class="key ${button_show_class} ${(element[key].charCode === 'caps' && isCaps) || (element[key].charCode === 'shift' && isShift) ? 'active' : ''}" ${data_value}' >
                             <span class="secondary ${element[key].shift !== undefined && element[key].caps === undefined ? 'alt' : 'd-none'} ${isShift ? 'active' : ''} ${isMobileScreen ? 'd-none' : ''}">${element[key].shift ?? ''}</span>
-                            <span class="main ${isShift ? ((element[key].caps !== undefined) || (element[key].caps === undefined && element[key].shift == undefined ) ? 'active' : '') : 'active'}">${main_key_text}</span>
+                            <span class="main ${isShift ? ((element[key].caps !== undefined) || (element[key].caps === undefined && element[key].shift == undefined) ? 'active' : '') : 'active'}">${main_key_text}</span>
                         </button>`
                 }
             }
