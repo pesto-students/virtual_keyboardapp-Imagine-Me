@@ -261,7 +261,8 @@ const keys = [
             value: "Enter",
             width: "auto",
             charCode: '\n',
-            alternate: '&#8629;'
+            alternate: '&#8629;',
+            isMobile: false
         },
     },
     {
@@ -338,7 +339,7 @@ const keys = [
         "11": {
             value: "/",
             width: "6.5%",
-            alternate: "?",
+            shift: "?",
             isMobile: false
         },
         "12": {
@@ -362,7 +363,6 @@ const keys = [
         "0": {
             value: "?/)",
             width: "6.5%",
-            mobileWidth: "40px",
             charCode: 'symbols',
             isMobile: true
         },
@@ -384,11 +384,11 @@ const keys = [
             mobileWidth: "40px",
             isMobile: true
         },
-        "5": {
-            value: "?/)",
-            width: "6.5%",
-            mobileWidth: "40px",
-            charCode: 'symbols',
+        "12": {
+            value: "Enter",
+            width: "auto",
+            charCode: '\n',
+            alternate: '&#8629;',
             isMobile: true
         },
     }
@@ -564,7 +564,6 @@ let symbolKeys = [
         "0": {
             value: "aA",
             width: "6.5%",
-            mobileWidth: "40px",
             charCode: 'symbols',
             isMobile: true
         },
@@ -578,7 +577,6 @@ let symbolKeys = [
         "2": {
             value: "aA",
             width: "6.5%",
-            mobileWidth: "40px",
             charCode: 'symbols',
             isMobile: true
         },

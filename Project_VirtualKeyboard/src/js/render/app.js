@@ -7,9 +7,10 @@ const app = {
     init: () => {
         window.onresize = () => app.renderKeyboard()
         app.renderKeyboard()
+        const textarea = document.getElementById('input')
+        // textarea.focus()
         document.addEventListener('click', function (event) {
-            const textarea = document.getElementById('input')
-            textarea.focus()
+            // textarea.focus()
             if (event.target.classList.contains('key') || event.target.classList.contains('main') || event.target.classList.contains('secondary')) {
                 let button = event.target
                 if (button.tagName !== "BUTTON")
@@ -37,7 +38,6 @@ const app = {
                 // app.output.push(value)
                 textarea.value = app.output.join('')
                 textarea.scrollTop = textarea.scrollHeight;
-                document.getElementById('input').focus()
             }
         })
     },
