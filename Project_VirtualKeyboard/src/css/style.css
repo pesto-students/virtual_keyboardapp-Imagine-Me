@@ -1,0 +1,46 @@
+.keys {
+    display: grid;
+    text-align: center;
+}
+
+.keys>button {
+    position: relative;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(128, 128, 128, 0.116);
+    margin: 0;
+}
+
+.keys>button>span.alt {
+    position: absolute;
+    top: 3px;
+    left: 6px;
+    color: grey;
+}
+
+.d-none {
+    display: none !important;
+}
+
+
+.opacity-0 {
+    visibility: hidden;
+}
+
+button.key.active {
+    background-color: red;
+}
+
+.alt.active {
+    color: red !important;
+}
+
+
+@media(min-width:720px) {
+    .keys>button {
+        padding: 15px;
+        margin: 10px 4px 0 4px;
+    }
+}
