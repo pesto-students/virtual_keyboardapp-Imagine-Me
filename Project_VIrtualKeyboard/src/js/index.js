@@ -1,3 +1,3 @@
-import app from './render/app.js'
+import app from './view/app.js'
 
 app.init()
