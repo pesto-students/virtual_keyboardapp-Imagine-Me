@@ -512,14 +512,14 @@ let symbolKeys = [
         "8": {
             value: ";",
             width: "6.5%",
-            mobileWidth: "40px"
+            mobileWidth: "auto"
         },
-        "9": {
-            value: "Enter",
-            width: "auto",
-            charCode: '\n',
-            alternate: '&#8629;'
-        },
+        // "9": {
+        //     value: "Enter",
+        //     width: "auto",
+        //     charCode: '\n',
+        //     alternate: '&#8629;'
+        // },
     },
     {
         "1": {
@@ -574,10 +574,10 @@ let symbolKeys = [
             charCode: ' '
         },
         "2": {
-            value: "aA",
-            width: "6.5%",
-            charCode: 'symbols',
-            isMobile: true
+            value: "Enter",
+            width: "auto",
+            charCode: '\n',
+            alternate: '&#8629;'
         },
     }
 ]
