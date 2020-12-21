@@ -70,9 +70,6 @@ const app = {
         this.textarea.addEventListener('keypress',function(event){
             event.preventDefault()
         })
-        // this.textarea.addEventListener('focus',function(){
-
-        // })
     },
 
 
