@@ -2,6 +2,18 @@
 > A virtual keyboard from scratch with Vanilla JS, HTML, and CSS that can be used in the browser and will be responsive.
 One to two paragraph statement about your product and what it does.
 
+<h3>Setting Up</h3>
+<p>Clone the repo</p>
+<code>git clone https://github.com/pesto-students/virtual_keyboardapp-Imagine-Me.git</code>
+<p>Install the requirement</p>
+<code>npm i</code>
+<p>Start development server</p>
+<code>npm start</code>
+
+<h3>Online Demo</h3>
+<a href="https://laughing-noether-728624.netlify.app/">here</a>
+
+
 ![](sample.jpg)
 
 ## MVP Requirement (Mandatory)

@@ -1,0 +1,23 @@
+{
+  "name": "virtual_keyboardapp-imagine-me",
+  "version": "1.0.0",
+  "description": "Virtual keyboard using vanilla JS",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server ./Project_VIrtualKeyboard",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pesto-students/virtual_keyboardapp-Imagine-Me.git"
+  },
+  "author": "Prince Thomas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pesto-students/virtual_keyboardapp-Imagine-Me/issues"
+  },
+  "homepage": "https://github.com/pesto-students/virtual_keyboardapp-Imagine-Me#readme",
+  "dependencies": {
+    "http-server": "^0.12.3"
+  }
+}
