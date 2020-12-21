@@ -547,7 +547,7 @@ let symbolKeys = [
             mobileWidth: "40px"
         },
         "6": {
-            value: "?",
+            value: "/",
             width: "6.5%",
             mobileWidth: "40px"
         },

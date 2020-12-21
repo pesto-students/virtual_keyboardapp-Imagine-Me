@@ -43,12 +43,25 @@ const app = {
                         setTimeout(() => {
                             button.classList.remove('active')
                         }, 100)
+                        let indexOfShiftTemp = app.keyState.indexOf('shift')
+                        if (indexOfShiftTemp !== -1) {
+                            app.keyState.splice(indexOfShiftTemp, 1);
+                            app.renderKeyboard()
+                        }
                         app.output.push(value)
                 }
 
                 textarea.value = app.output.join('')
                 textarea.scrollTop = textarea.scrollHeight;
             }
+        })
+
+        document.querySelector('button.btn').addEventListener('click', function () {
+            var virtualKeyboard = document.getElementById('virtual-keyboard')
+            if (virtualKeyboard.classList.contains('animUp'))
+                virtualKeyboard.classList.remove('animUp')
+            else
+                virtualKeyboard.classList.add('animUp')
         })
     },
 
