@@ -374,6 +374,7 @@ const keys = [
         "3": {
             value: "Space",
             width: "40%",
+            alternate: "<span style='position:absolute;bottom:0;left: 0; right:0'>&#x02514;&#x02500;&#x02500;&#x02500;&#x02500;&#x02518;</span>",
             mobileWidth: "40%",
             charCode: ' '
         },
@@ -396,6 +397,56 @@ const keys = [
 
 let symbolKeys = [
     {
+        "1": {
+            value: "1",
+            width: "6.5%",
+        },
+        "2": {
+            value: "2",
+            mobileWidth: '10%',
+            width: "6.5%",
+        },
+        "3": {
+            value: "3",
+            width: "6.5%",
+            mobileWidth: '10%',
+        },
+        "4": {
+            value: "4",
+            width: "6.5%",
+            mobileWidth: '10%',
+        },
+        "5": {
+            value: "5",
+            width: "6.5%",
+            mobileWidth: '10%',
+        },
+        "6": {
+            value: "6",
+            width: "6.5%",
+            mobileWidth: '10%',
+        },
+        "7": {
+            value: "7",
+            width: "6.5%",
+            mobileWidth: '10%',
+        },
+        "8": {
+            value: "8",
+            width: "6.5%",
+            mobileWidth: '10%',
+        },
+        "9": {
+            value: "9",
+            width: "6.5%",
+            mobileWidth: '10%',
+        },
+        "10": {
+            value: "0",
+            width: "6.5%",
+        }
+    },
+    {
         "0": {
             value: "!",
             width: "6.5%",
@@ -404,41 +455,41 @@ let symbolKeys = [
         "1": {
             value: "@",
             width: "6.5%",
-            mobileWidth: "40px",
+            mobileWidth: "10%",
         },
         "2": {
             value: "#",
-            mobileWidth: "40px",
+            mobileWidth: "10%",
         },
         "3": {
             value: "$",
             width: "6.5%",
-            mobileWidth: "40px"
+            mobileWidth: "10%"
         },
         "4": {
             value: "%",
             width: "6.5%",
-            mobileWidth: "40px"
+            mobileWidth: "10%"
         },
         "5": {
             value: "^",
             width: "6.5%",
-            mobileWidth: "40px"
+            mobileWidth: "10%"
         },
         "6": {
             value: "&",
             width: "6.5%",
-            mobileWidth: "40px"
+            mobileWidth: "10%"
         },
         "7": {
             value: "+",
             width: "6.5%",
-            mobileWidth: "40px"
+            mobileWidth: "10%"
         },
         "8": {
             value: "\\",
             width: "6.5%",
-            mobileWidth: "40px"
+            mobileWidth: "10%"
         },
         "9": {
             value: "~",
@@ -455,42 +506,42 @@ let symbolKeys = [
         "1": {
             value: "{",
             width: "6.5%",
-            mobileWidth: "40px"
+            mobileWidth: "10%"
         },
         "2": {
             value: "}",
             width: "6.5%",
-            mobileWidth: "40px"
+            mobileWidth: "10%"
         },
         "3": {
             value: "[",
             width: "6.5%",
-            mobileWidth: "40px"
+            mobileWidth: "10%"
         },
         "4": {
             value: "]",
             width: "6.5%",
-            mobileWidth: "40px"
+            mobileWidth: "10%"
         },
         "5": {
             value: "|",
             width: "6.5%",
-            mobileWidth: "40px"
+            mobileWidth: "10%"
         },
         "6": {
             value: "=",
             width: "6.5%",
-            mobileWidth: "40px"
+            mobileWidth: "10%"
         },
         "7": {
             value: ":",
             width: "6.5%",
-            mobileWidth: "40px"
+            mobileWidth: "10%"
         },
         "8": {
             value: ";",
             width: "6.5%",
-            mobileWidth: "40px"
+            mobileWidth: "10%"
         },
         "9": {
             value: "-",
@@ -508,32 +559,32 @@ let symbolKeys = [
         "1": {
             value: "'",
             width: "6.5%",
-            mobileWidth: "40px"
+            mobileWidth: "10%"
         },
         "2": {
             value: "\"",
             width: "6.5%",
-            mobileWidth: "40px"
+            mobileWidth: "10%"
         },
         "3": {
             value: "<",
             width: "6.5%",
-            mobileWidth: "40px"
+            mobileWidth: "10%"
         },
         "4": {
             value: ">",
             width: "6.5%",
-            mobileWidth: "40px"
+            mobileWidth: "10%"
         },
         "5": {
             value: "?",
             width: "6.5%",
-            mobileWidth: "40px"
+            mobileWidth: "10%"
         },
         "6": {
             value: "/",
             width: "6.5%",
-            mobileWidth: "40px"
+            mobileWidth: "10%"
         },
         "7": {
             value: "Backspace",
@@ -553,25 +604,25 @@ let symbolKeys = [
         "1": {
             value: "(",
             width: "6.5%",
-            mobileWidth: "40px"
+            mobileWidth: "10%"
         },
         "2": {
             value: "Space",
             width: "30%",
-
+            alternate: "<span style='position:absolute;bottom:0;left: 0; right:0'>&#x02514;&#x02500;&#x02500;&#x02500;&#x02500;&#x02518;</span>",
             mobileWidth: "30%",
             charCode: ' '
         },
         "3": {
             value: ")",
             width: "6.5%",
-            mobileWidth: "40px"
+            mobileWidth: "10%"
         },
         "4": {
             value: "Enter",
             width: "auto",
             charCode: '\n',
-            alternate: '&#8629;'
+            alternate: '&#x021B2;'
         },
     }
 ]
