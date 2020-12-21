@@ -4,9 +4,9 @@ const app = {
     isSymbolKeyBoard: false,
     output: [],
     keyState: [],
-    init: () => {
-        window.onresize = () => app.renderKeyboard()
-        app.renderKeyboard()
+    init: function()  {
+        window.onresize = () => this.renderKeyboard()
+        this.renderKeyboard()
         const textarea = document.getElementById('input')
         document.addEventListener('click', function (event) {
             if (event.target.classList.contains('key') || event.target.classList.contains('main') || event.target.classList.contains('secondary')) {
@@ -15,25 +15,25 @@ const app = {
                     button = button.parentNode
                 let value = button.getAttribute('data-value')
                 switch (value) {
-                    case 'backspace': app.output.pop();
+                    case 'backspace': this.output.pop();
 
                         button.classList.add('active')
                         setTimeout(() => {
                             button.classList.remove('active')
                         }, 100)
                         break;
-                    case 'symbols': app.isSymbolKeyBoard = !app.isSymbolKeyBoard;
-                        app.renderKeyboard()
+                    case 'symbols': this.isSymbolKeyBoard = !this.isSymbolKeyBoard;
+                        this.renderKeyboard()
                         break;
                     case 'caps':
-                        let indexOfCaps = app.keyState.indexOf('caps')
-                        indexOfCaps === -1 ? app.keyState.push('caps') : app.keyState.splice(indexOfCaps, 1);
-                        app.renderKeyboard()
+                        let indexOfCaps = this.keyState.indexOf('caps')
+                        indexOfCaps === -1 ? this.keyState.push('caps') : this.keyState.splice(indexOfCaps, 1);
+                        this.renderKeyboard()
                         break;
                     case 'shift':
-                        let indexOfShift = app.keyState.indexOf('shift')
-                        indexOfShift === -1 ? app.keyState.push('shift') : app.keyState.splice(indexOfShift, 1);
-                        app.renderKeyboard()
+                        let indexOfShift = this.keyState.indexOf('shift')
+                        indexOfShift === -1 ? this.keyState.push('shift') : this.keyState.splice(indexOfShift, 1);
+                        this.renderKeyboard()
                         break;
 
                     default:
@@ -41,18 +41,18 @@ const app = {
                         setTimeout(() => {
                             button.classList.remove('active')
                         }, 100)
-                        let indexOfShiftTemp = app.keyState.indexOf('shift')
+                        let indexOfShiftTemp = this.keyState.indexOf('shift')
                         if (indexOfShiftTemp !== -1) {
-                            app.keyState.splice(indexOfShiftTemp, 1);
-                            app.renderKeyboard()
+                            this.keyState.splice(indexOfShiftTemp, 1);
+                            this.renderKeyboard()
                         }
-                        app.output.push(value)
+                        this.output.push(value)
                 }
 
-                textarea.value = app.output.join('')
+                textarea.value = this.output.join('')
                 textarea.scrollTop = textarea.scrollHeight;
             }
-        })
+        }.bind(this))
 
         document.querySelector('button.btn').addEventListener('click', function () {
             var virtualKeyboard = document.getElementById('virtual-keyboard')
@@ -64,14 +64,14 @@ const app = {
     },
 
 
-    renderKeyboard: () => {
+    renderKeyboard: function() {
         const isMobileScreen = window.innerWidth <= 720
         if (!isMobileScreen)
-            app.isSymbolKeyBoard = false
+            this.isSymbolKeyBoard = false
         let keyboard = ''
-        const isCaps = app.keyState.includes('caps')
-        const isShift = app.keyState.includes('shift')
-        let keyboard_keys = app.isSymbolKeyBoard ? symbolKeys : keys
+        const isCaps = this.keyState.includes('caps')
+        const isShift = this.keyState.includes('shift')
+        let keyboard_keys = this.isSymbolKeyBoard ? symbolKeys : keys
 
         keyboard_keys.forEach(element => {
             const gridWidth = []
