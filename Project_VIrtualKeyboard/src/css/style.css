@@ -12,6 +12,16 @@ textarea:focus {
     border: 1px solid grey;
     outline: none;
 }
+.p-relative{
+    position: relative;
+}
+.hider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
 .btn{
     padding: 12px 20px;
     border: none;

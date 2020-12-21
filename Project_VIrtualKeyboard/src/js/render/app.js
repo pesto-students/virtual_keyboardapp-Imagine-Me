@@ -4,11 +4,12 @@ const app = {
     isSymbolKeyBoard: false,
     output: [],
     keyState: [],
-    init: function()  {
+    textarea: document.getElementById('input'),
+    init: function () {
         window.onresize = () => this.renderKeyboard()
         this.renderKeyboard()
-        const textarea = document.getElementById('input')
         document.addEventListener('click', function (event) {
+            this.textarea.focus()
             if (event.target.classList.contains('key') || event.target.classList.contains('main') || event.target.classList.contains('secondary')) {
                 let button = event.target
                 if (button.tagName !== "BUTTON")
@@ -16,20 +17,22 @@ const app = {
                 let value = button.getAttribute('data-value')
                 switch (value) {
                     case 'backspace': this.output.pop();
-
                         button.classList.add('active')
                         setTimeout(() => {
                             button.classList.remove('active')
                         }, 100)
                         break;
+
                     case 'symbols': this.isSymbolKeyBoard = !this.isSymbolKeyBoard;
                         this.renderKeyboard()
                         break;
+
                     case 'caps':
                         let indexOfCaps = this.keyState.indexOf('caps')
                         indexOfCaps === -1 ? this.keyState.push('caps') : this.keyState.splice(indexOfCaps, 1);
                         this.renderKeyboard()
                         break;
+
                     case 'shift':
                         let indexOfShift = this.keyState.indexOf('shift')
                         indexOfShift === -1 ? this.keyState.push('shift') : this.keyState.splice(indexOfShift, 1);
@@ -49,8 +52,8 @@ const app = {
                         this.output.push(value)
                 }
 
-                textarea.value = this.output.join('')
-                textarea.scrollTop = textarea.scrollHeight;
+                this.textarea.value = this.output.join('')
+                this.textarea.scrollTop = this.textarea.scrollHeight;
             }
         }.bind(this))
 
@@ -58,13 +61,19 @@ const app = {
             var virtualKeyboard = document.getElementById('virtual-keyboard')
             if (virtualKeyboard.classList.contains('animUp'))
                 virtualKeyboard.classList.remove('animUp')
-            else
+            else {
                 virtualKeyboard.classList.add('animUp')
+                this.textarea.focus()
+            }
+        }.bind(this))
+
+        this.textarea.addEventListener('keypress',function(event){
+            event.preventDefault()
         })
     },
 
 
-    renderKeyboard: function() {
+    renderKeyboard: function () {
         const isMobileScreen = window.innerWidth <= 720
         if (!isMobileScreen)
             this.isSymbolKeyBoard = false
