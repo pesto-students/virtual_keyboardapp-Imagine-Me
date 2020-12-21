@@ -74,7 +74,7 @@ const keys = [
         "12": {
             value: "=",
             width: "6.5%",
-            shift: "=",
+            shift: "+",
             isMobile: false
         },
         "13": {
