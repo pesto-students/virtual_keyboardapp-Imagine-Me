@@ -8,9 +8,7 @@ const app = {
         window.onresize = () => app.renderKeyboard()
         app.renderKeyboard()
         const textarea = document.getElementById('input')
-        // textarea.focus()
         document.addEventListener('click', function (event) {
-            // textarea.focus()
             if (event.target.classList.contains('key') || event.target.classList.contains('main') || event.target.classList.contains('secondary')) {
                 let button = event.target
                 if (button.tagName !== "BUTTON")
