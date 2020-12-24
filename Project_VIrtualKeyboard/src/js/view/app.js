@@ -2,13 +2,13 @@ import { keys, symbolKeys } from '../seed/keySeed.js'
 
 const app = {
     isSymbolKeyBoard: false,
-    output: [],
+    output: '',
     keyState: [],
     textarea: document.getElementById('input'),
     init: function () {
         window.onresize = () => this.renderKeyboard()
         this.renderKeyboard()
-        document.addEventListener('click', function (event) {
+        document.addEventListener('click', (event) => {
             this.textarea.focus()
             if (event.target.classList.contains('key') || event.target.classList.contains('main') || event.target.classList.contains('secondary')) {
                 let button = event.target
@@ -16,11 +16,8 @@ const app = {
                     button = button.parentNode
                 let value = button.getAttribute('data-value')
                 switch (value) {
-                    case 'backspace': this.output.pop();
-                        button.classList.add('active')
-                        setTimeout(() => {
-                            button.classList.remove('active')
-                        }, 100)
+                    case 'backspace':
+                        this.output = this.output.slice(0, -1);
                         break;
 
                     case 'symbols': this.isSymbolKeyBoard = !this.isSymbolKeyBoard;
@@ -40,38 +37,27 @@ const app = {
                         break;
 
                     default:
-                        button.classList.add('active')
-                        setTimeout(() => {
-                            button.classList.remove('active')
-                        }, 100)
                         let indexOfShiftTemp = this.keyState.indexOf('shift')
                         if (indexOfShiftTemp !== -1) {
                             this.keyState.splice(indexOfShiftTemp, 1);
                             this.renderKeyboard()
                         }
-                        this.output.push(value)
+                        this.output += value
                 }
-
-                this.textarea.value = this.output.join('')
+                this.textarea.value = this.output
                 this.textarea.scrollTop = this.textarea.scrollHeight;
             }
-        }.bind(this))
+        })
 
-        document.querySelector('button.btn').addEventListener('click', function () {
+        document.querySelector('button.btn').addEventListener('click', () => {
             var virtualKeyboard = document.getElementById('virtual-keyboard')
-            if (virtualKeyboard.classList.contains('animUp'))
-                virtualKeyboard.classList.remove('animUp')
-            else {
-                virtualKeyboard.classList.add('animUp')
-                this.textarea.focus()
-            }
-        }.bind(this))
+            virtualKeyboard.classList.toggle('animUp')
+        })
 
-        this.textarea.addEventListener('keypress',function(event){
+        this.textarea.addEventListener('keypress', (event) => {
             event.preventDefault()
         })
     },
-
 
     renderKeyboard: function () {
         const isMobileScreen = window.innerWidth <= 720

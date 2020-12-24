@@ -12,24 +12,28 @@ textarea:focus {
     border: 1px solid grey;
     outline: none;
 }
-.p-relative{
+
+.p-relative {
     position: relative;
 }
-.hider{
+
+.hider {
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
 }
-.btn{
+
+.btn {
     padding: 12px 20px;
     border: none;
     border-radius: 5px;
     background-color: rgb(108, 211, 214);
     color: white;
 }
-.text-center{
+
+.text-center {
     text-align: center;
 }
 
@@ -44,6 +48,28 @@ textarea:focus {
     background-color: transparent;
     border: none;
     margin: 0;
+}
+
+.keys>button:active {
+    /* background-color: red!important; */
+    animation: glow 1s ease-in-out;
+}
+
+@keyframes glow {
+    0% {
+        background-color: rgba(108, 210, 214, 0.582);
+        box-shadow: 0 0 5px rgba(108, 210, 214, 0.02);
+    }
+
+    50% {
+        background-color: rgb(108, 211, 214);
+        box-shadow: 0 0 20px rgba(108, 210, 214, 0.185);
+    }
+
+    100% {
+        background-color: rgba(108, 210, 214, 0.582);
+        box-shadow: 0 0 5px rgba(108, 210, 214, 0.02);
+    }
 }
 
 .keys>button:not(:last-child)::after {
@@ -103,7 +129,8 @@ button.key.active {
     box-shadow: 0 -4px 6px rgba(128, 128, 128, 0.089);
     transform: translateY(100%);
 }
-.animUp{
+
+.animUp {
     transform: translateY(0%) !important;
 }
 
