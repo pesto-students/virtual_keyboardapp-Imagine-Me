@@ -10,6 +10,7 @@ const keys = [
         "1": {
             value: "1",
             width: "6.5%",
+            mobileWidth: "auto",
             shift: "!",
         },
         "2": {
@@ -64,6 +65,7 @@ const keys = [
             value: "0",
             width: "6.5%",
             shift: ")",
+            mobileWidth: "auto"
         },
         "11": {
             value: "-",
@@ -97,34 +99,30 @@ const keys = [
             value: "q",
             width: "6.5%",
             caps: "Q",
-            shift: "Q"
+            mobileWidth: "auto"
         },
         "2": {
             value: "w",
             width: "6.5%",
             mobileWidth: "10%",
             caps: "W",
-            shift: "W",
         },
         "3": {
             value: "e",
             width: "6.5%",
             mobileWidth: "10%",
-            shift: "E",
             caps: "E",
         },
         "4": {
             value: "r",
             width: "6.5%",
             mobileWidth: "10%",
-            shift: "R",
             caps: "R"
         },
         "5": {
             value: "t",
             width: "6.5%",
             mobileWidth: "10%",
-            shift: "T",
             caps: "T"
         },
         "6": {
@@ -132,13 +130,11 @@ const keys = [
             width: "6.5%",
             mobileWidth: "10%",
             caps: "Y",
-            shift: "Y"
         },
         "7": {
             value: "u",
             width: "6.5%",
             mobileWidth: "10%",
-            shift: "U",
             caps: "U"
         },
         "8": {
@@ -146,26 +142,24 @@ const keys = [
             width: "6.5%",
             mobileWidth: "10%",
             caps: "I",
-            shift: "I"
         },
         "9": {
             value: "o",
             width: "6.5%",
             mobileWidth: "10%",
             caps: "O",
-            shift: "O"
         },
         "10": {
             value: "p",
             width: "6.5%",
             mobileWidth: "10%",
             caps: "P",
-            shift: "P"
         },
         "11": {
             value: "[",
             width: "6.5%",
             shift: "{",
+            mobileWidth: "auto",
             isMobile: false
         },
         "12": {
@@ -186,63 +180,53 @@ const keys = [
             value: "Caps",
             width: "auto",
             alternate: "&#8657;",
-            alternateShow: false,
             charCode: 'caps',
             isMobile: false
         },
         "1": {
             value: "a",
             width: "6.5%",
-            shift: "A",
             caps: "A"
         },
         "2": {
             value: "s",
             width: "6.5%",
-            shift: "S",
             caps: "S"
         },
         "3": {
             value: "d",
             width: "6.5%",
-            shift: "D",
             caps: "D"
         },
         "4": {
             value: "f",
             width: "6.5%",
-            shift: "F",
             caps: "F"
         },
         "5": {
             value: "g",
             width: "6.5%",
-            shift: "G",
             caps: "G"
         },
         "6": {
             value: "h",
             width: "6.5%",
-            shift: "H",
             caps: "H"
         },
         "7": {
             value: "j",
             width: "6.5%",
-            shift: "J",
             caps: "J"
         },
         "8": {
             value: "k",
             width: "6.5%",
-            shift: "K",
             caps: "K"
         },
         "9": {
             value: "l",
             width: "6.5%",
             caps: "L",
-            shift: "L"
         },
         "10": {
             value: ";",
@@ -269,7 +253,6 @@ const keys = [
             value: "Caps",
             width: "auto",
             alternate: "&#8657;",
-            alternateShow: false,
             charCode: 'caps',
             isMobile: true
         },
@@ -277,50 +260,42 @@ const keys = [
             value: "Shift",
             width: "auto",
             alternate: "->",
-            alternateShow: false,
             charCode: 'shift',
             isMobile: false
         },
         "2": {
             value: "z",
             width: "6.5%",
-            shift: "Z",
             caps: "Z"
         },
         "3": {
             value: "x",
             width: "6.5%",
-            shift: "X",
             caps: "X"
         },
         "4": {
             value: "c",
             width: "6.5%",
-            shift: "C",
             caps: "C"
         },
         "5": {
             value: "v",
             width: "6.5%",
-            shift: "V",
             caps: "V"
         },
         "6": {
             value: "b",
             width: "6.5%",
-            shift: "B",
             caps: "B"
         },
         "7": {
             value: "n",
             width: "6.5%",
-            shift: "N",
             caps: "N"
         },
         "8": {
             value: "m",
             width: "6.5%",
-            shift: "M",
             caps: "M"
         },
         "9": {
@@ -345,7 +320,6 @@ const keys = [
             value: "Shift",
             width: "auto",
             alternate: "->",
-            alternateShow: false,
             charCode: 'shift',
             isMobile: false
         },
