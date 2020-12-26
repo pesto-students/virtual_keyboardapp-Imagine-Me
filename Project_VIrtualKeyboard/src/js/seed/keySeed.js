@@ -82,7 +82,7 @@ const keys = [
         "13": {
             value: "Backspace",
             width: "auto",
-            alternate: "&#8592;",
+            alternate: "&#x027F5;",
             charCode: 'backspace',
             isMobile: false
         },
@@ -91,7 +91,7 @@ const keys = [
         "0": {
             value: "Tab",
             width: "auto",
-            alternate: "&#10153;",
+            alternate: "&#x021A0;",
             charCode: '\t',
             isMobile: false
         },
@@ -244,7 +244,7 @@ const keys = [
             value: "Enter",
             width: "auto",
             charCode: '\n',
-            alternate: '&#8629;',
+            alternate: '&#8626;',
             isMobile: false
         },
     },
@@ -327,7 +327,7 @@ const keys = [
         "13": {
             value: "Backspace",
             width: "auto",
-            alternate: "&#8592;",
+            alternate: "&#x027F5;",
             charCode: 'backspace',
             isMobile: true
         },
@@ -362,7 +362,7 @@ const keys = [
             value: "Enter",
             width: "auto",
             charCode: '\n',
-            alternate: '&#8629;',
+            alternate: '&#8626;',
             isMobile: true
         },
     }
@@ -563,7 +563,7 @@ let symbolKeys = [
         "7": {
             value: "Backspace",
             width: "auto",
-            alternate: "&#8592;",
+            alternate: "&#x027F5;",
             charCode: 'backspace',
             isMobile: true
         },
@@ -596,12 +596,10 @@ let symbolKeys = [
             value: "Enter",
             width: "auto",
             charCode: '\n',
-            alternate: '&#x021B2;'
+            alternate: '&#8626;'
         },
     }
 ]
-
-// Enter &#8629;
 
 
 export { keys, symbolKeys };
