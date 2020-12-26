@@ -7,9 +7,13 @@ One to two paragraph statement about your product and what it does.
 <code>git clone https://github.com/pesto-students/virtual_keyboardapp-Imagine-Me.git</code>
 <p>Install the requirement</p>
 <code>npm i</code>
+<p></p>
 <p>Start development server</p>
 <code>npm start</code>
-
+<p></p>
+<p>To test</p>
+<code>npm test</code>
+<p></p>
 <h3>Online Demo</h3>
 <a href="https://laughing-noether-728624.netlify.app/">here</a>
 
